@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('Install dpendencies') {
+        stage('Install dependencies') {
             steps {
                 sh "pip install -r lab2/requirements.txt"
             }
@@ -25,7 +25,7 @@ pipeline {
             }
         }
 
-        stage('Install dpendencies') {
+        stage('Evaluate model') {
             steps {
                 sh "python3 lab2/evaluate_.py"
             }
